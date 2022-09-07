@@ -1,0 +1,115 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f7fa;
+}
+
+h1, .h3, .about-me {
+  margin: 50px 0 20px 10px;  
+}
+
+h4 {
+  margin: 0 0 0 15px;  
+}
+
+.land {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 30px;
+}
+.main-content-section a { 
+  position: relative;
+  top: 20px;
+  left: 90%;
+  margin: 0px 0 0 0px;
+}
+
+.main-content-section a:link     {                  /*ссылка в обычном состоянии*/
+  color: black;
+  text-decoration: none; 
+}
+.main-content-section a:visited  {                  /*ссылка которую посетили*/
+   text-decoration: none;
+   color: black;      
+  }	  
+  .main-content-section a:hover    {                      /*ссылка на которую навели курсор*/
+ color: silver;  
+}   
+.main-content-section a:active   {                  /*ссылка на которую нажали*/
+background: #242424;
+}   
+
+
+.main-content-li {
+  margin: 0 0 10px 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 900px;
+  background-color: #fff;
+  margin: 40px auto;
+}
+
+.main-content-section{
+  width: 60%;
+}
+.about-me-profession {
+  font-size: 14px;
+  font-weight: 700px;
+  color: #000;
+}
+
+.analyst{
+  font-size: 12px;  
+}
+/*sidebar section  */
+.sidebar-section { 
+  background-color: #1e2939;
+  width: 40%;
+  padding: 40px 0;
+}
+.contacts-section,
+.tech-skill-section,
+.language-section{
+  margin: 0px 0 0 40px;
+}
+.sidebar-title{
+  font-style:  normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+/*contacts section  */
+.contacts-section-tipe{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  margin-right: 7px;
+}
+.contacts-section-link{
+  color: #565E6A;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+/*skills section  */
+.srills-list{
+  padding: 0 0 0 17px;
+}
+.srills-item{
+  color: #F86D3A;
+}
+.srills-item-text{
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
