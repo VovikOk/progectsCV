@@ -1,113 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My resume</title>
-    <link rel="stylesheet" href="fonts/Montserrat-Bold.ttf" />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <!--Main container-->
-    <div class="main-container">
-      <!--Main content section-->
-      <div class="main-content-section">
-        <div class="lang">
-          <a href="index.html">UA</a></option> 
-        </div>       
-        <!--About me section-->
-        <div class="about-me-section">          
-          <h1>Volodymyr Kurianov</h1>         
-          <p class="about-me">
-            Address: Zhytomyr, Ukraine<br /> 
-            Age: 35 years<br />  
-            <br /> 
-            I have great interest and desire to become a Front-End Developer.
-            Therefore, I use various Internet resources and independently study HTML5, CSS3, JS.<br />          
-          </p>
-        </div>
 
-        <!--My education section-->
-        <div class="my-education-section">
-          <h3 class="h3">Education</h3>
-          <h4>Zhytomyr State Technological University</h4>
-          <ul>
-            <li> 
-              <span>2010 year</span>                 
-              <span>master</span><br>          
-              <span>"Automated management of technological processes" </span> <br>                
-            </li>           
-          </ul>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TITLE</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-        <!--My work experiens section-->
-        <div class="my-work-experiens-section">
-          <h3 class="h3">Work Experience</h3>
 
-          <!--Company -->
-          <div>            
-            <h4>State employee</h4>
-              <ul>
-                <li>
-                  <p>November 2010 - up to now | Ukraine</p>
-                  <p class="analyst">starting from September 2020, I work in the analytical group </p> 
-                </li>
-              </ul>          
-          </div>   
-        </div>            
+<header class="header">
 
-        <!--My qualities section-->
-        <div class="my-qualities-section">
-          <h3 class="h3">Qualities</h3>
-          <ul>
-            <li class="main-content-li"><span>communication</span></li>
-            <li class="main-content-li"><span>responsibility</span></li>
-            <li class="main-content-li"><span>purposefulness</span></li>           
-            <li class="class="main-content-li""><span>punctuality</span></li>                       
-          </ul>          
-        </div>
-      </div>
-
-      <!--Sidebar section-->
-      <aside class="sidebar-section">
-        <img src="img/photo.jpg" alt="my photo" />
-
-        <!--Contacts section-->
-        <div class="contacts-section">
-          <h3 class="sidebar-title">Contacts</h3>
-          <div>
-            <span class="contacts-section-tipe">C:</span>
-            <a class="contacts-section-link" href="tel:+380666292628">+380 66 629-26-28</a>
-          </div>
-          <div>
-            <span class="contacts-section-tipe">E:</span>
-            <a class="contacts-section-link" href="mailto:vovik-ok.87@ukr.net">vovik-ok.87@ukr.net</a>
-          </div>
-        </div>
-
-        <!--Tech skill section-->
-        <div class="tech-skill-section">
-          <h3 class="sidebar-title">Skills</h3>
-          <ul class="srills-list">
-            <li class="srills-item"><span class="srills-item-text">HTML5</span></li>
-            <li class="srills-item"><span class="srills-item-text">CSS3</span></li>
-            <li class="srills-item"><span class="srills-item-text">JavaScript</span></li>           
-            <li class="srills-item"><span class="srills-item-text">Adobe Photoshop CS5</span></li>
-            <li class="srills-item"><span class="srills-item-text">Visual Studio Code</span></li>
-            <li class="srills-item"><span class="srills-item-text">MS Office</span></li>
-            
-          </ul>
-        </div>
-
-        <!--language section-->
-        <div class="language-section">
-          <h3 class="sidebar-title">Language</h3>
-          <ul class="srills-list">
-            <li class="srills-item"><span class="srills-item-text">English</span></li>            
-          </ul>
-        </div>
-      </aside>
+  <!-- обозначение главного навигационного блока profile-->
+  <div class="header_profile">
+    <div class="header_profile_logotype">
+      <a class="home" href="">
+        <img id="header_logotype_1" src="img/ukraine.png" alt="logo" />
+        <img id="header_logotype_2" src="img/ukraine_upa.png" alt="logo" />
+      </a>
     </div>
-  </body>
-  <script src='js/index.js'></script>  
+    <div class="header_h1">
+      <h1>header h1</h1>
+    </div>
+    <div class="header_profile_list">
+      <select class="header_profile_list_novigator">
+        <option>data 1</option>
+        <option>data 2</option>
+        <option>data 3</option>
+        <option>data 4</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- обозначение главного навигационного блока-->
+  <nav class="header_novigator">
+    <ul class="header_novigator_list">
+      <!--маркированый список-->
+      <!--і - курсив-->
+      <li><a href=""><i class="header_novigator_list_page"></i>page 1</a></li>
+      <li><a href=""><i class="header_novigator_list_page"></i>page 2</a></li>
+      <li><a href=""><i class="header_novigator_list_page"></i>page 3</a></li>
+      <li><a href=""><i class="header_novigator_list_page"></i>page 4</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+
+<body>
+  <!--Main container-->
+  <div class="main_container">
+    <!--Main content section-->
+    <div class="main_content_section_right">
+      <h1>Header h1</h1>
+      <p>
+        Address: Zhytomyr, Ukraine<br />
+        Age: 35 years<br />
+        <br />
+        I have great interest and desire to become a Front-End Developer.
+        Therefore, I use various Internet resources and independently study HTML5, CSS3, JS.<br />
+      </p>
+    </div>
+
+
+    <!--Sidebar section-->
+    <div class="main_content_section_left">
+      <h3>header h3</h3>
+      <div>
+        <span>text</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<footer class="footer">
+  <!--подвал-->
+  <h3>header h3</h3>
+  <div class="footer_contacs">
+    <ul class="footer_contacts_section">
+      <li><a class="telephone" href="tel:">telephone</a></li>
+      <li><a class="mail" href="mailto:">mail</a></li>
+    </ul>
+  </div>
+  <div class="footer_messager">
+    <ul class="footer_messager_list">
+      <li><a class="facebook_logo" href=""><img class="facebook_logotype_img" src="img/facebook.png"
+            alt="facebook" /></a>
+      </li>
+      <li><a class="instagram_logo" href=""><img class="instagram_logotype_img" src="img/instagram.png"
+            alt="instagram" /></a></li>
+      <li><a class="youtube_logo" href=""><img class="youtube_logotype_img" src="img/youtube.png" alt="youtube" /></a>
+      </li>
+    </ul>
+  </div>
+
+</footer>
+
+
+
+<script src='js/index.js'></script>
+
 </html>

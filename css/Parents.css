@@ -1,0 +1,722 @@
+
+  @font-face {                           /*добавляетет требуемую типографию*/
+  font-family: 'fontello';               /*задаем шрифт*/
+  src: url('../font/fontello.eot?44103168');
+  src: url('../font/fontello.eot?44103168#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?44103168') format('woff2'),
+       url('../font/fontello.woff?44103168') format('woff'),
+       url('../font/fontello.ttf?44103168') format('truetype'),
+       url('../font/fontello.svg?44103168#fontello') format('svg');
+  font-weight: normal;                   /*нежирный*/
+  font-style: normal;                    /*стилизация обычная*/
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?44103168#fontello') format('svg');
+  }
+}
+*/
+ /*для всех тегов содержащих классы имя которого начинается с іcon- и класов имя которых содержит icon-,
+  вставляются первыми потомками внутрь своих родителей */
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak-as: none;              /*запрещает озвучивание елемента*/
+ 
+  display: inline-block;       /*элемент -  снаружи для всех строка, а внутри блочный (для кнопок)*/
+  text-decoration: inherit;    /*подчеркивает текст, наследует у родителя*/
+  width: 1em;                  /*ширина блока*/
+  margin-right: .2em;          /*размер поля справо*/
+  text-align: center;          /*выравнивание по центру*/
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;        /*определяет представление строчных букв*/
+  text-transform: none;        /*преобразовывает текст элемента в заглавные или прописные символы*/
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;            /*межстрочный интервал*/
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 2em;           /*ширина поля слева*/   
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased; /*префиксы для браузеров хром, опера*/
+  -moz-osx-font-smoothing: grayscale; /* для мозилы*/
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ /*вставляем иконки в начало ссылок*/
+.icon-users:before { content: '\e800'; } /* '' */
+.icon-headphones:before { content: '\e801'; } /* '' */
+.icon-camera:before { content: '\e802'; } /* '' */
+.icon-videocam:before { content: '\e803'; } /* '' */
+.icon-picture:before { content: '\e804'; } /* '' */
+.icon-camera-alt:before { content: '\e805'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-eyedropper:before { content: '\f1fb'; } /* '' */
+
+  
+    body   {
+	        background: #4d4d4d url(../Image/parents/parents.jpg) no-repeat; /*фон */
+            background-size: 100%; /*резиновый фон*/
+			margin: 5px;           /*поля*/
+			font-family: Aril,Verdana,sans-serif;
+			font-size: x-large;     /*размер шрифта*/
+			}
+	    
+	.centerbox      {                 /* центровщик*/
+	                 margin: 0 auto;   /* верх/низ 0, право/лево авто */
+			         /*border:thin solid white;*/
+                    }	
+	.clearfix:after {                /* костиль*/
+	                content:"";       /*в конце поля виртуальный тег, чтоб блоки  flout не выпадали*/
+				    display:table;
+				    clear:both;
+				    }
+					
+	.text_style     {                       /*через точку привязка к классам*/
+	                 margin-top:1%;
+					 margin-bottom:1%;
+					 opacity:0.8; 
+                     -moz-border-radius: 30px; 
+                     border-radius: 30px;
+				     font-family: Cursive;
+                     color: silver;
+				     font-weight: normal;
+				     font-size: 1em;
+                     border:3px groove #cccccc;
+                     width: 20%;
+                     padding:1% 1% 1% 1%;
+					 }						
+	.img_style      {                       /*резиновая картинка */
+                    width:100%;
+                    background-size: 100%;
+                    }
+					
+					
+	.main_header    {             
+                     text-shadow: #fff -1px -1px 0, #333 1px 1px 0; /*текст с тенью */
+					 border-bottom:thin solid black;/*нижняя черная сплошная граница*/
+                 	 font-size: 0.85em;
+					 padding-bottom: 2px;
+					}			   
+    .logotype       {
+	                 float:left;     /*обтекание блока текстом*/
+				     width:13%;
+					 min-width:80px;
+				    }	
+	.main_novigator {
+	                float:left;
+					width:70%;
+					}
+	.main_novigator ul  {	
+	                     margin: 0;   /*поля*/
+                         padding: 0;  /*отступы*/
+                         list-style: none; /*стил маркера, полржение и его изображение*/
+                        }	
+	.main_novigator li  {	
+                         display: inline-block; /* Отображать как строчный элемент */
+                       	 padding-left: 1%;
+						 margin-top: 25px;
+						}
+	.nov_style			{
+		                 text-decoration: none; 
+                         text-shadow: #fff -1px -1px 0, #333 1px 1px 0;
+						 font-size: 0.85em;
+						 color: black;
+						 
+	                    }						 
+							 
+  	#home	     {                     /*# привязка к атребуту id (для уникального елемента)*/
+		          position: relative;   /* относительное позиционирование, смещенние относилельно места в общем потоке*/
+	      	      float:right;
+			      max-width:10%;
+			      padding-left: 30px;	
+                  margin-top:125px;			 
+			     }	
+	#home:before {                      /*иконка выхода*/
+                  content: "";
+                  position: absolute;
+                  left: 2px;
+				  top: 2px;
+                  width: 20px;
+                  height: 20px;
+                  background: transparent url("../Image/parents/home.gif") no-repeat;
+                  background-position: 0 -20px;
+				  opacity: 0.3;
+                 } 
+	#home:hover:before {              /*при наведении курсора*/
+                        opacity: 1.1;
+                       }			 
+	.main_header a:link     {                  /*ссылка в обычном состоянии*/
+	                          color: black;
+	                          text-decoration: none; 
+			        		}
+	.main_header a:visited  {                  /*ссылка которую посетили*/
+	                           text-decoration: none;
+	                           color: black;
+                               border-bottom: 1px dotted white ;	  
+                            }	  
+	.main_header a:hover    {                      /*ссылка на которую навели курсор*/
+              		         color: silver;  
+			                }   
+    .main_header a:active   {                  /*ссылка на которую нажали*/
+              		        background: #242424;
+			               }   
+
+					   
+    .center {min-height: 500px;}	 
+    .box_left      {float:left;}
+	.box_right     {float:right;}
+	.box_center {
+                color: white;
+				font-size: 0.9em;
+				margin-left:30%;
+				margin-right:30%;
+				padding:1% 1% 1% 1%;
+	            }
+	 
+	.poem_title         {
+		                 min-height:100%;
+				         padding:0 5% 0 15%;   
+						}	
+	.poems_left         {position:fixed;}   /*фиксорованое позиционирование относительно окна браузера*/
+	.poem_novigator     { 
+	                     width:90%;
+	                     font-size: 0.8em;
+	                     text-shadow: #fff -1px -1px 0, #333 1px 1px 0; /*текст с тенью */ 
+              		    }
+	.poem_novigator ol  {width:100%;}		  /*пронумерованый список*/			
+	.poem_novigator a:link   {
+		                      text-decoration: none;
+		                      color: black;
+		                     }
+	.poem_novigator a:visited  {
+	                            text-decoration: none;
+	                            color: black;
+                                border-bottom: 1px dotted white ;	  
+                               }	  					 
+	.poem_novigator a:hover {             
+              		         color: silver;  
+			                }   
+    .poem_novigator a:active {             
+              		          background: #242424;
+			                 }   					 
+	.poems     { 
+	            overflow:hidden;   /*если потомок не влезает в родителя*/
+			    height:600px;
+	            color: white;
+	            font-size: 0.8em;
+				margin-right:5%;
+			   	margin-left:30%;
+				border-top: 1px solid transparent;
+				margin-top: 15px;
+			   }
+			   
+			   
+	.video_center	 {
+                      color: white;
+				      font-size: 0.9em;
+				      margin-left:30%;
+				      padding:1% 1% 1% 1%;
+	                 }	
+	.video_left      {
+		              float:left;
+	                  width: 310px;
+					 }	
+	.video           {
+		              overflow:hidden;
+			          height:500px;
+					  }
+    .video a:link    {padding-left:10%;}				 
+	.video a:hover   {color: silver;   }				 
+	.video_novigator  ul   {
+		                    padding:1%;
+		                    list-style: none;
+						   }
+	.video_novigator  li   {margin-bottom:30px;}					   
+	.video_slide1 a:link          {      
+	                               display:block;
+	                               overflow: hidden;
+	                               text-decoration: none;
+								   width:300px;
+								   height:175px;
+								   background: url(../Image/parents/smallfoto/v1.jpg);
+								   background-position: 0 0;
+	                              }
+	.video_slide1 a:hover        {
+		                           background-position:0 680px;
+	                               transition: 10s;
+                                  }		
+	.video_novigator p     {
+		                    margin-left:10px;
+	                        padding-top:125px;
+						   }								  
+	.video_slides a:link          {      
+	                               display:block;
+	                               overflow: hidden;
+								   position:absolute;
+	                               text-decoration: none;
+								   width:300px;
+								   height:175px;
+								   background: url(../Image/parents/smallfoto/m1.jpg);
+								   z-index:99;
+								  }
+	.video_slides a:hover         { background:none;}  
+    .video_slides    {
+                	   width:300px;
+					   height:175px;
+	                   overflow: hidden;
+					   position:relative;
+					 }
+    .video_slide     {
+                      width:300px;
+		              height:175px;  
+	                  position:absolute;
+	                  animation-name: video_slide;
+	                  animation-duration: 8s;
+	                  animation-timing-function: linear;
+	                  animation-iteration-count: infinite;
+		              -o-animation:  video_slide 8s linear infinite;
+		              -webkit-animation: video_slide 8s linear infinite;
+					  -moz-animation: video_slide 8s linear infinite;
+                     }
+    @keyframes video_slide {     /*анимация, перемещение елемента*/
+                    
+                      from  {
+                            left: 0;
+                            }
+                      12.5% {
+                            transform: translate(-0px, 0);
+                            }
+					  25%   {
+                             transform: translate(-300px, 0);
+                            }	
+                      36%   {
+                             transform: translate(-300px, 175px);
+                            }
+                      37%   {
+                             transform: translate(300px, 175px);
+                            }
+                      87.5% {
+                             transform: translate(300px, 0);
+                            }
+                      to    {
+                             transform: (0px, 0px);
+                            }
+                           }
+	.sl1    { 
+             background: url(../Image/parents/smallfoto/m5.jpg);
+             animation-delay: 6s;
+            }
+    .sl2    { 
+             background: url(../Image/parents/smallfoto/m4.jpg);
+             animation-delay: 4s;
+            }
+    .sl3    { 
+             background: url(../Image/parents/smallfoto/m3.jpg);
+             animation-delay: 2s;
+            }
+    .sl4    { 
+             background: url(../Image/parents/smallfoto/m2.jpg);
+             animation-delay: 0s;
+            }							   
+	.title     {
+	            min-height:100%;
+				padding:0 5% 0 15%;
+			   }
+			
+    
+	
+    .wrap  {/*border:thin solid black;*/
+            height: 360px;
+            margin: 10px auto 0;
+            position: relative;
+            width: 95%;
+		   }
+    .wrap > input {
+                   display: none;
+                  }
+	.slider {
+             /*border:thin solid black;*/
+             height: inherit;
+             overflow: hidden;
+             position: relative;
+             width: inherit;
+            }
+	.slides {
+             height: inherit;
+			 opacity: 0;
+             position: absolute;
+			 width: 360px;
+             z-index: 0;
+			 left: 50%;
+			 transform: rotate(55deg);
+             -webkit-filter: hue-rotate(90deg);
+             transition: 1s;
+            }
+	.Photo      {
+		          min-height:70px;
+		          padding-top:5px;
+				}
+	.Photo  a   { 
+	              position:absolute;
+		          margin-left:48%;                  
+                  width: 60px;
+                  height: 60px;
+                  background: transparent url("../Image/parents/photo.gif") no-repeat;
+                  background-position: 0 -70px;
+				 }
+	.Photo	a:hover       { opacity: 0.3;}  	
+	.Photo	a:active      {             
+              		        background-position: 0 0px;
+							opacity: 1.3;
+			              }  				 
+	.slides a   {
+		         display:block;
+	             padding:180px 20px; 
+                 background: none;	
+				}	
+	.img1 { background: url(../Image/parents/smallfoto/sm1.jpg) center no-repeat; }
+    .img2 { background: url(../Image/parents/smallfoto/sm2.jpg) center no-repeat; }
+    .img3 { background: url(../Image/parents/smallfoto/sm3.jpg) center no-repeat; }
+	.img4 { background: url(../Image/parents/smallfoto/sm4.jpg) center no-repeat; }
+	.history {
+		      position:absolute;
+	          right:120%;
+			  bottom:150px;
+			  width:65%;
+			  /*border:thin solid white;*/
+			  color: white;
+			 }
+	.wrap .control {
+                    position: absolute;
+                    margin-left: -65px;
+                    left: 50%;
+			       }
+	.wrap label {
+                 cursor: pointer;
+                 display: inline-block;
+                 height: 8px;
+                 margin: 10px;
+                 position: relative;
+                 width: 8px;
+                 border-radius: 20%;
+                }
+    .wrap label:after {
+                       border: 2px solid white;
+                       content: " ";
+                       display: block;
+                       height: 12px;
+                       left: -4px;
+                       position: absolute;
+                       top: -4px;
+                       width: 12px;
+                       border-radius: 20%;
+                      }
+    #point1:checked ~ .control label:nth-of-type(1),
+    #point2:checked ~ .control label:nth-of-type(2),
+    #point3:checked ~ .control label:nth-of-type(3),
+    #point4:checked ~ .control label:nth-of-type(4)	{
+                                                      background: white;
+                                                    }
+	#point1:checked ~ .slider > .img1,
+    #point2:checked ~ .slider > .img2,
+    #point3:checked ~ .slider > .img3,
+	#point4:checked ~ .slider > .img4{
+                                       opacity: 1;
+                                       z-index: 1;
+									   transform: none;
+                                       -webkit-filter: none;
+                                      }
+									  
+									  
+	.music_center	{min-height: 700px;}								  								  
+	.music_left     {
+		             float:left;
+	                 min-height:250px;
+					}
+	.music_right    {
+		             float:right;
+					 min-height:250px;
+					}								  
+	.music		    {/*border:thin solid black;*/
+                      height: 500px; 
+                      margin: 1%;				 
+                      position: absolute;
+			          width:98%;
+            	    }   
+	.music h2       {color: white;}			   
+	.music > input {
+                    height: 18px;
+				    width: 18px;
+				    cursor: pointer;
+				    }
+	.music_title   {
+		            text-align: center;
+					color: white;
+					font-size:0.9em;
+					font-family: Cursive;
+					cursor: pointer;
+				   }			   
+	.lists {
+             overflow: hidden;
+		   }	
+	.plaer_logo   { 
+	                display:inline-block;
+	                position:relative;
+	                overflow: hidden;
+		            height: 50px;
+				    width: 50px;
+				    cursor: pointer;
+					top:16px;
+					background: transparent url("../Image/parents/player.gif") no-repeat;
+                    background-position: 0 -1px;
+	               }
+	.plaer_logo:hover   { background-position: 0 -55px;}	
+	.plaer_logo:active	{ background-position: 0 -110px;}
+    .list  {/*border:thin solid black;*/
+             height: inherit;
+			 opacity: 0;
+             position: absolute;
+			 width: 55%;
+             z-index: 0;
+			 left:25%;
+			 top: 50px;
+		   }
+    .lists ol {
+		        margin:1%;
+			    padding:0;
+			    list-style-position: inside;
+			    font-size:0.8em;
+			    line-height:25px;
+			   }
+			   
+	.list a     {
+		        text-decoration:none;
+		        color: white;
+				}		   
+	#songs:checked ~ .lists > .filter1,
+    #autor:checked ~ .lists > .filter2,
+    #albom:checked ~ .lists > .filter3,
+	#years:checked ~ .lists > .filter4{
+                                       opacity: 1;
+                                       z-index: 1;
+									   }	
+		
+    #main_footer {
+                 position:absolute;
+                 border-top:thin solid black;
+                 width: 95%;
+				 max-height:100px;
+				 padding:0% 2% 0% 2%;
+                 clear:both;
+				 margin-top:0;
+				 }
+	.music_play	   { 
+	                 position:absolute;
+	                 overflow:hidden;
+			         height:30px;
+					 width:100%;
+				   }							   
+			
+	audio         {	width:100%;}				 
+					 
+    h4      {
+	        color: white;
+		 	text-align:center;
+	        }			 
+				 
+	h3      { 
+	         margin:10px 0 0 0;
+			 font-size: 1.6em;	
+			}			  
+	h2      {
+		     font-family: serif;
+		     text-align:  center;
+			}			  
+	h1      {
+	         margin:0;
+             font-size: 3em;	
+	         padding-left: 10%; 
+			 padding-top: 20px;
+			 padding-bottom: 10px;
+	        }
+			
+			
+
+    @media (max-width: 1055px) {                                /*медиозапросы*/
+	         body               { font-size: large;} 
+			 #home	            { margin-top:110px;}
+			 #home:before       { top: -2px; }	
+			.poems,.poem_novigator {font-size: 1em;}
+			.poems_left         {width:25%;}	
+			.slides             {left: 48%;}
+			.history            {right:110%;}
+			.music > input      {
+                                 height: 15px;
+				                 width: 15px;
+				                }
+			                   }	
+	@media (max-width: 795px)  {
+	         body               { font-size: small;}
+			 #home	            { margin-top:95px; }
+             #home:before       {
+			                     width: 15px;
+                                 height: 15px;
+                                 top: -3px;
+                                 background-position:0 0px;  
+                           		}
+			.poems,.poem_novigator {font-size: 1.3em;}	
+			.poems_left         {width:32%;}
+			.slides             {left: 32%;}
+			.history            {
+				                 right:103%;
+			                     width:35%;
+								}
+			.music > input      {
+                                 height: 12px;
+				                 width: 12px;
+				                }
+			.plaer_logo     { 
+	                         height: 25px;
+				             width: 25px;
+				             top:8px;
+					         background: transparent url("../Image/parents/player_mini.gif") no-repeat;
+                             background-position: 0 -1px;
+	                        }
+	        .plaer_logo:hover   { background-position: 0 -28px;}	
+	        .plaer_logo:active	{ background-position: 0 -55px;}					
+			.music_center	    {min-height: 500px;}					
+			.video_center       {
+				                  width: 100%;
+				                  margin:0;
+								  padding:0;
+								}	
+			.video_left           {float:none;}
+			.title                {padding:0;}
+			.nov_style	          { font-size: 1.4em; }	
+							   }
+								
+	@media (max-width: 599px)   {
+	        .main_novigator li  { display: block; }
+			.main_header        {position:relative;}
+			#home	            {	      	        	
+                                position:absolute;
+					            left: 80%;					 
+					            }
+			.logotype           { float:right;}
+			.poems,.poem_novigator {font-size: 1em;}
+			.slides             {left: 30%;}
+			.history            {
+				                 right:103%;
+			                     width:30%;
+								}
+			.list				{ left:25%;}
+			.music > input      {
+                                 height: 10px;
+				                 width: 10px;
+				                }
+			.nov_style	        { font-size: 1.4em; }						
+						        }
+	@media (max-width: 479px)   {
+	        body                {background: #4d4d4d ;}
+			.text_style         {width:45%;}
+			h1                  {
+			                     font-size: 2em;
+			                     padding-left: 1%; 
+			                     padding-top: 2%;
+			                     padding-bottom: 2%;
+				                }
+			#home	            {left: 75%;}
+			.poems_left         {width:30%;}	
+			.poem_novigator ol  {padding-left:15px;}
+			.poems,.poem_novigator {font-size: 0.9em;}
+			.poems_left         {
+				                 position:static;
+			                     width:45% 
+								}	
+			.poems              {	margin-left:0;}
+			
+			.slides             { 
+			                     height: 360px;
+				                 left: 7%;
+			                     width: inherit;;
+								}
+			.history            {
+				                 top:380px;
+				                 right:16%;
+			                     width:60%;
+								}
+			.wrap               {height: 500px;}
+			.wrap > input {
+	                       display: inline;
+                          }
+	        .wrap > input#point1 {margin-left:41%;}
+			.wrap .control      {display:none;}
+ 			.slider             {height: 450px;}
+			.Photo  a           {margin-left:44%;}
+	        .box_center         {
+				                 margin:0;
+				                 width:100%;
+								}
+			.music		         {
+				                  position:static;
+			                      height: 600px; 
+								  }	
+			.list				{ 
+			                     left:1%;					  
+			                     width:100%;
+								 top:400px;
+								}
+			.music_left,  .music_right{ display:none;}
+	        .center_video .text_style {width:97%;}
+			.nov_style	              { font-size: 1.5em; }	
+			.video_novigator          {margin-left:10% ;}
+	                         }							    
+	@media (max-width: 295px)   {
+	        .main_novigator     {
+	                             float:none;
+					             width:90%;
+					            }
+			.logotype           { float:none;}
+			#home	            {	      	        	
+                                 float:none;
+                                 position: relative;
+								 left: -2px;
+								 padding-left: 21px;	
+                                 margin-top:20px;	
+				             	}
+			.text_style         {width:95%;}	
+			
+			.img1, .img2, .img3, .img4 {background-size: 100%;}	
+			.Photo  a           {margin-left:35%;}
+			.history            {
+				                 top:350px;
+				                 right:16%;
+			                     width:80%;
+								}
+			.wrap               {height: 500px;}
+			.wrap > input#point1{margin-left:30%;}
+			.slider             {height: 450px;}
+			.list				{ 
+			                     top:500px;
+								 left:2%;	
+								 }
+			.center_video .text_style {width:115%;}
+			.nov_style	              { font-size: 1em; }	
+			.video_novigator          {margin-left:0 ;}					 
+				    			}							   
+							   
+							   
